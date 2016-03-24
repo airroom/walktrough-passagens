@@ -1,0 +1,84 @@
+@keyframes cleytonKoving {
+    0% { transform: rotate(0deg) translate3d(300px, 0px, 0px); }
+    20% { transform: rotate(30deg) translate3d(-100px, 90px, 0px); }
+    60% { transform: rotate(-10deg) translate3d(100px, -90px, 0px); }
+    100% { transform: rotate(10deg) translate3d(-50px, 0, 0px); }
+    /*50% { transform: rotate(-deg) translate3d(-200px, -25px, 0px); }*/
+    /*75% { transform: rotate(5deg) translate3d(60px, 5px, 0px); }*/
+}
+
+@keyframes bgMaluco { 
+  0%{background-size: 75%; }
+  50%{background-size: 250%; }
+  75%{background-size: 120%; }
+  100%{background-size: 50%; }
+}
+
+.reveal .slide-background.present:not([data-background-hash*=".webm"]) {
+	opacity: .5
+}
+
+.reveal .cleyton-realm img {
+	margin: 0;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+.reveal .cleyton-sphere {
+	position: relative;
+	border-radius: 99999em;
+/*	background: rgba(69,148,191, 0.5) ;
+	box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.2);
+	background: radial-gradient(ellipse at center, rgba(30,87,153,.2) 0%,rgba(125,185,232,.2) 100%);*/
+	background-position: 50% 50%;
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+	animation-name: bgMaluco;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.cleyton-things {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	animation-name: cleytonKoving;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+.reveal .slide-background video {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none !important;
+	max-height: none !important;
+	opacity: .7;
+	object-fit: cover;
+}
+
+
+#cleyton {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	z-index: 10;
+}
+
+.cleyton-plane {
+	position: absolute;
+	bottom: 0;
+    transform: rotate(-2deg);
+    left: 9px;
+    bottom: -43px;
+    -moz-filter: drop-shadow(0 0 2px rgba(0,0,0,.6));
+    -webkit-filter: drop-shadow(0 0 2px rgba(0,0,0,.6));
+}
