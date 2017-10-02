@@ -191,17 +191,18 @@
 					</section>
 
 					<section>
-						<h2>Sites</h2>
+						<h2>Sites/Apps</h2>
 						<ul>
 							<li><a href="http://flights.google.com" target="_blank">Google Flights</a></li>
 							<li><a href="http://kayak.com.br" target="_blank">Kayak</a></li>
 							<li><a href="http://skyscanner.com.br" target="_blank">Skyscanner</a></li>
 							<li><a href="https://skiplagged.com/" target="_blank">Skiplagged</a> <small style="display: inline-block; vertical-align: middle;">(Mostra um gráfico do dia barato)</small></li>
+							<li><a href="https://www.hopper.com/" target="_blank">Hopper</a> <small style="display: inline-block; vertical-align: middle;">(Avisa quando os preços abaixam)</small></li>
 							<li><a href="http://cheapoair.com" target="_blank">Cheapoair</a></li>
 							<li><a href="http://low-cost-airline-guide.com" target="_blank">Low Cost Airline Guide</a></li>
 							<li><a href="http://matrix.itasoftware.com" target="_blank">Matrix Ita</a>  <small style="display: inline-block; vertical-align: middle;">(Todas as Passagens, não vende)</small></li>
 						</ul>
-						<p><small>(Teste sua passagem em todos)</small></p>
+						<p><small>Teste sua passagem em todos \o/</small></p>
 					</section>
 
 					<section>
@@ -236,17 +237,21 @@
 				progress: true,
 				history: true,
 				center: true,
-
+				multiplex: {
+					secret: null,
+					id: 'd794ff05ca258139',
+					url: 'https://reveal-js-multiplex-ccjbegmaii.now.sh/'
+				},
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+					{ src: 'plugin/multiplex/client.js', async: true }
 				]
 			});
 
