@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>lolol</title>
   <style>
     .meh {
@@ -273,9 +274,9 @@
 
 
       document.body.addEventListener('click', e => {
-        if (e.target.className === 'woot-1') return Reveal.prev();
+        if (e.target.className === 'woot-1') return Reveal.left();
         if (e.target.className === 'woot-2') return Reveal.up();
-        if (e.target.className === 'woot-3') return Reveal.next();
+        if (e.target.className === 'woot-3') return Reveal.right();
         if (e.target.className === 'woot-4') return Reveal.down();
       });
   </script>
